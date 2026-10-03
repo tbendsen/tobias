@@ -7,5 +7,22 @@
 </head>
 <body>
   <h1>Hello, World!</h1>
+
+  <button id="knap">Tryk på mig</button>
+  <p id="besked">Du har ikke trykket endnu.</p>
+
+  <script>
+    // JavaScript kører i browseren og kan reagere på det, brugeren gør.
+    let antal = 0;
+
+    const knap = document.getElementById("knap");
+    const besked = document.getElementById("besked");
+
+    // Når der trykkes på knappen, tæller vi op og ændrer teksten på siden.
+    knap.addEventListener("click", function () {
+      antal = antal + 1;
+      besked.textContent = "Du har trykket " + antal + " gang(e).";
+    });
+  </script>
 </body>
 </html>
